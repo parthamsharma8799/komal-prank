@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Komal?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>ARE YOU KOMAL?</h2>
+    <button onclick="checkAnswer('yes')">YES</button>
+    <button onclick="checkAnswer('no')">NO</button>
+    <p id="message"></p>
+
+    <script>
+        function checkAnswer(answer) {
+            if (answer === 'yes') {
+                document.getElementById('message').innerHTML = "PRATHAM IS YOUR HUSBAND";
+                setTimeout(() => {
+                    if (confirm("Click YES if this is true!")) {
+                        document.getElementById('message').innerHTML = "YOU GOT 3 CHILDRENS IN YOUR FUTURE AND PRATHAM LOVES YOU A LOT";
+                    } else {
+                        document.getElementById('message').innerHTML = "BHAGWAN NE TUMHARI JODI BNAYI H PRATHAM KE SATH, TUM NO NHI KR SKTI";
+                    }
+                }, 1000);
+            } else {
+                document.getElementById('message').innerHTML = "NO YOU ARE KOMAL I KNOW";
+            }
+        }
+    </script>
+</body>
+</html>
